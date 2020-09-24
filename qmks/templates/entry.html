@@ -1,0 +1,105 @@
+{##继承base.html模板#}
+{% extends 'base.html' %}
+
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="static/entry/lbtcss/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="static/entry/lbtcss/htmleaf-demo.css">
+	<link rel="stylesheet"  type="text/css" href="static/entry/lbtcss/style.css">
+    <link rel="stylesheet"  type="text/css" href="static/entry/entry.css">
+<title>中国各省单身率与经济发展、男女比例、教育水平的关系</title>
+
+</head>
+
+<body>
+<h1>中国各省单身率与经济发展、男女比例、教育水平的关系</h1>
+<div class="fram">
+	<h3 class="xiaobiaoti">项目介绍</h3>
+    <div class="story">
+    	<h4 class="h">项目背景</h4>
+        <p class="p">本项目名称为《中国各省单身率与经济发展、男女比例、教育水平的关系》， 人口发展趋势一直都是现代经济决定性因素。人作为社会的主体，对国家的经济甚至是国家综合实力都有重大的影响。根据《中国统计年鉴2018》数据显示，中国的单身人口已经达到了2.49亿，是总人口的18%，相当于英国、法国和德国人口的总和。我们这个项目旨在探讨为何中国的单身率越来越高，是否跟经济发展水平、男女比例不平衡和教育水平有关？</p>
+        <h4 class="h">数据来源</h4>
+        <p class="p">国家统计局，中国人民共和国教育部，国家统计局—中国统计年鉴</p>
+        <h4 class="h">名词解释</h4>
+        <p class="p">单身率：指一个国家或地区未结婚的男女比例</p>
+        <h4 class="h">数据故事</h4>
+        <p class="p">根据数据分析，我得到了以下的一些发现与感想：</p>
+        <p class="p">1、中国的单身人口与各省的经济发展，男女比例以及教育水平是有较大的关系。根据以上数据我们得出了，经济发展水平最高、教育水平最高以及男女比例最不均衡的广东省，单身人口也是最多的，且男性单身人口也是最高的。</p>
+        <p class="p">2、经济水平越高的地区，教育水平就越高。</p>
+        <p class="p">3、根据最新研究发现，受教育水平越高的人，思想观念就越开放，更加追求身体上与心理上的自由，越不会受到“人生只有结了婚才算圆满，对得起父母”这种传统观念的影响。跟上面数据分析到的情况是吻合的。</p>
+        <p class="p">4、根据数据分析，我们得出了各省男女比例是不均衡的，男性人口多于女性，且男性的单身人数也高于女性，所以我们可以推断出不久的将来，中国有一部分的男性是找不到配偶的。这会使中国生育率降低，对我国对抗人口老龄化和经济的发展是不利的。</p>
+        <p class="p">5、高单身率队社会的稳定也是不利的。根据心理学的说法，当人们长期单身，心态会逐渐发生变化，甚至心理扭曲。这对社会的治安是存在一定的威胁。且光棍人数多，会提高“拐卖妇女”的违法犯罪行为。</p>
+
+
+
+           <h1>请选择您想了解的数据</h1>
+    <div align="center">
+<select name="" onchange="javascript:window.open(this.options[this.selectedindex].value)" style="width:250px;height:30px;text-align:center;text-align-last:center">
+<option value='total_people' selected>全国总男女人口数对比</option>
+<option value='provice_people' selected>各省总人口和男女人口数对比</option>
+<option value='GDP' selected>中国各省2016-2018年GDP情况</option>
+<option value='unmarried_people' selected>2016-2018年各省总单身人口数和男女单身人口数对比</option>
+<option value='junior_college_people' selected>大专学历以上总人数和男女人数</option>
+<option value="#" selected>--请选择--</option>
+</SELECT>
+    <SCRIPT language=JavaScript>
+var select = document.querySelector('select');select.onchange = function(){	window.location=this.value;}
+    </SCRIPT>
+    </div>
+    </div>
+    <hr />
+
+    <h3 class="xiaobiaoti">选择您感兴趣的图表</h3>
+    <div id="wrapper">
+  <div id="slider-wrap">
+             <ul id="slider">
+               <li >
+                 <a href="/total_people" type='submit'><img class="i" src="static/entry/img/全国男女人口数对比.png" /></a>
+               </li>
+
+               <li>
+                  <a href="/GDP" type="submit"><img class="i" src="static/entry/img/中国各省2016-2018年GDP情况.png" /></a>
+               </li>
+
+               <li >
+               <a href="/unmarried_people" type="submit"><img class="i" src="static/entry/img/中国各省单身人口情况.png" /></a>
+               </li>
+
+               <li>
+               <a href="/junior_college_people" type="submit"><img class="i" src="static/entry/img/2018年各省6岁及以上大专学历以上总人数.jpg" /></a>
+               </li>
+
+               <li>
+               <a href="provice_people" type="submit"><img class="i" src="static/entry/img/各省总人口数男女人口数对比.png" /></a>
+               </li>
+
+            </ul>
+             <!--控制按钮-->
+            <div class="btns" id="next"><i class="fa fa-arrow-right"><img src="static/entry/img/right.png" /></i></div>
+            <div class="btns" id="previous"><img src="static/entry/img/left.png" /><i class="fa fa-arrow-left"></i></div>
+            <div id="counter"></div>
+
+            <div id="pagination-wrap">
+              <ul>
+              </ul>
+            </div>
+            <!--控制按钮-->
+  </div>
+</div>
+	</div>
+
+	<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('&lt;script src="lbtjs/jquery-1.11.0.min.js">&lt;\/script>')</script>
+	<script type="text/javascript" src="static/entry/lbtjs/slide.js"></script>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

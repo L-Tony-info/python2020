@@ -1,0 +1,48 @@
+body{
+	background-color:#ccd6d7;
+  	font-family:      Verdana, Geneva, Arial, sans-serif;
+	font-size:        medium;
+  	margin-top:       5%;
+  	margin-bottom:    5%;
+  	margin-left:      10%;
+  	margin-right:     10%;
+  	border:           1px dotted gray;
+  	padding:          10px 10px 10px 10px;
+	}
+h2{
+	text-align:center;
+}
+.fram{
+	border:dashed #ccd6d7;
+	width:1400px;
+	height:1400px;
+	margin:auto;
+}
+table {
+font-size:          1em;
+background-color:    #b4bdbe;
+border:             1px solid #909090;
+color:              #2a2a2a;
+padding:            5px 5px 2px;
+border-collapse:    collapse;
+}
+
+td, th {
+border:             thin dotted gray;
+}
+
+ .anniu{
+	 width: 100px;
+	 padding:8px;
+	 border-color: #357ebd;
+	 color: #2f2f4f;
+	 -moz-border-radius: 10px;
+	 -webkit-border-radius: 10px;
+	 border-radius: 10px; /* future proofing */
+	 -khtml-border-radius: 10px; /* for old Konqueror browsers */
+	 text-align: center;
+	 vertical-align: middle;
+	 border: 1px solid transparent;
+	 font-weight: 900;
+	 font-size:125%
+ }

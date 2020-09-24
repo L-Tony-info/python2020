@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <table>
+<tr>
+    {% for xifen2 in the_data2 %}
+        <td>{{ xifen2 }}</td>
+    {% endfor %}
+</tr>
+</table>
+{% endblock %}

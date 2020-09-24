@@ -1,0 +1,1496 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+    
+</head>
+<body>
+	<h3 class="xiaobiaoti">中国各省单身人口情况（数据分析）</h3>
+        <p>1、根据2016年-2018年各省15岁及以上总单身数折线图可以看出，2016年-2018年三年间，各省的单身人数并未有太大的变化。其中，可以明显看出广东省的单身人口是最多的，西藏是最少的。</p>
+        <p>2、根据2016年-2018年各省15岁及以上男女单身人口数条形图对比可以得出，广东省男性单身人数和女性单身人数在全国内是最高的，其中，广东省2016年男性单身人数较多于女性，且逐年有呈上升的趋势。</p>
+        <p>3、以上两种情况，是否跟各省的经济发展水平、男女比例以及教育水平相关呢？我们将会结合下列数据和图表进行分析。</p>
+</body>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '693b80eed0cd448a816349414692fdf0')">2016-2018年各省15岁及以上总单身数</button>
+            <button class="tablinks" onclick="showChart(event, '3b808d8f568f462bbf92f2437e57696f')">各省15岁及以上男女单身人口数对比</button>
+    </div>
+
+    <div class="box">
+                <div id="693b80eed0cd448a816349414692fdf0" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_693b80eed0cd448a816349414692fdf0 = echarts.init(
+            document.getElementById('693b80eed0cd448a816349414692fdf0'), 'white', {renderer: 'canvas'});
+        var option_693b80eed0cd448a816349414692fdf0 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597"
+    ],
+    "series": [
+        {
+            "type": "line",
+            "name": "2016\u5e74",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "\u5317\u4eac",
+                    3434
+                ],
+                [
+                    "\u5929\u6d25",
+                    2224
+                ],
+                [
+                    "\u6cb3\u5317",
+                    7397
+                ],
+                [
+                    "\u5c71\u897f",
+                    5328
+                ],
+                [
+                    "\u5185\u8499\u53e4",
+                    3415
+                ],
+                [
+                    "\u8fbd\u5b81",
+                    5355
+                ],
+                [
+                    "\u5409\u6797",
+                    2940
+                ],
+                [
+                    "\u9ed1\u9f99\u6c5f",
+                    4791
+                ],
+                [
+                    "\u4e0a\u6d77",
+                    3103
+                ],
+                [
+                    "\u6c5f\u82cf",
+                    9063
+                ],
+                [
+                    "\u6d59\u6c5f",
+                    6981
+                ],
+                [
+                    "\u5b89\u5fbd",
+                    7570
+                ],
+                [
+                    "\u798f\u5efa",
+                    4207
+                ],
+                [
+                    "\u6c5f\u897f",
+                    5829
+                ],
+                [
+                    "\u5c71\u4e1c",
+                    10634
+                ],
+                [
+                    "\u6cb3\u5357",
+                    12159
+                ],
+                [
+                    "\u6e56\u5317",
+                    7885
+                ],
+                [
+                    "\u6e56\u5357",
+                    8152
+                ],
+                [
+                    "\u5e7f\u4e1c",
+                    21475
+                ],
+                [
+                    "\u5e7f\u897f",
+                    7430
+                ],
+                [
+                    "\u6d77\u5357",
+                    1645
+                ],
+                [
+                    "\u91cd\u5e86",
+                    3699
+                ],
+                [
+                    "\u56db\u5ddd",
+                    10583
+                ],
+                [
+                    "\u8d35\u5dde",
+                    5120
+                ],
+                [
+                    "\u4e91\u5357",
+                    7063
+                ],
+                [
+                    "\u897f\u85cf",
+                    649
+                ],
+                [
+                    "\u9655\u897f",
+                    5849
+                ],
+                [
+                    "\u7518\u8083",
+                    3801
+                ],
+                [
+                    "\u9752\u6d77",
+                    856
+                ],
+                [
+                    "\u5b81\u590f",
+                    889
+                ],
+                [
+                    "\u65b0\u7586",
+                    3044
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            }
+        },
+        {
+            "type": "line",
+            "name": "2017\u5e74",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "\u5317\u4eac",
+                    3599
+                ],
+                [
+                    "\u5929\u6d25",
+                    2563
+                ],
+                [
+                    "\u6cb3\u5317",
+                    7519
+                ],
+                [
+                    "\u5c71\u897f",
+                    5315
+                ],
+                [
+                    "\u5185\u8499\u53e4",
+                    2951
+                ],
+                [
+                    "\u8fbd\u5b81",
+                    5385
+                ],
+                [
+                    "\u5409\u6797",
+                    2665
+                ],
+                [
+                    "\u9ed1\u9f99\u6c5f",
+                    4258
+                ],
+                [
+                    "\u4e0a\u6d77",
+                    3102
+                ],
+                [
+                    "\u6c5f\u82cf",
+                    8558
+                ],
+                [
+                    "\u6d59\u6c5f",
+                    6881
+                ],
+                [
+                    "\u5b89\u5fbd",
+                    6826
+                ],
+                [
+                    "\u798f\u5efa",
+                    4594
+                ],
+                [
+                    "\u6c5f\u897f",
+                    5633
+                ],
+                [
+                    "\u5c71\u4e1c",
+                    9779
+                ],
+                [
+                    "\u6cb3\u5357",
+                    11841
+                ],
+                [
+                    "\u6e56\u5317",
+                    8311
+                ],
+                [
+                    "\u6e56\u5357",
+                    7996
+                ],
+                [
+                    "\u5e7f\u4e1c",
+                    19202
+                ],
+                [
+                    "\u5e7f\u897f",
+                    7284
+                ],
+                [
+                    "\u6d77\u5357",
+                    1621
+                ],
+                [
+                    "\u91cd\u5e86",
+                    3421
+                ],
+                [
+                    "\u56db\u5ddd",
+                    10809
+                ],
+                [
+                    "\u8d35\u5dde",
+                    5254
+                ],
+                [
+                    "\u4e91\u5357",
+                    7500
+                ],
+                [
+                    "\u897f\u85cf",
+                    592
+                ],
+                [
+                    "\u9655\u897f",
+                    5460
+                ],
+                [
+                    "\u7518\u8083",
+                    3526
+                ],
+                [
+                    "\u9752\u6d77",
+                    802
+                ],
+                [
+                    "\u5b81\u590f",
+                    1037
+                ],
+                [
+                    "\u65b0\u7586",
+                    2874
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            }
+        },
+        {
+            "type": "line",
+            "name": "2018\u5e74",
+            "connectNulls": false,
+            "symbolSize": 4,
+            "showSymbol": true,
+            "smooth": false,
+            "step": false,
+            "data": [
+                [
+                    "\u5317\u4eac",
+                    3290
+                ],
+                [
+                    "\u5929\u6d25",
+                    2151
+                ],
+                [
+                    "\u6cb3\u5317",
+                    7444
+                ],
+                [
+                    "\u5c71\u897f",
+                    4797
+                ],
+                [
+                    "\u5185\u8499\u53e4",
+                    2846
+                ],
+                [
+                    "\u8fbd\u5b81",
+                    5125
+                ],
+                [
+                    "\u5409\u6797",
+                    2671
+                ],
+                [
+                    "\u9ed1\u9f99\u6c5f",
+                    4099
+                ],
+                [
+                    "\u4e0a\u6d77",
+                    3021
+                ],
+                [
+                    "\u6c5f\u82cf",
+                    8647
+                ],
+                [
+                    "\u6d59\u6c5f",
+                    6345
+                ],
+                [
+                    "\u5b89\u5fbd",
+                    7600
+                ],
+                [
+                    "\u798f\u5efa",
+                    4458
+                ],
+                [
+                    "\u6c5f\u897f",
+                    5878
+                ],
+                [
+                    "\u5c71\u4e1c",
+                    8963
+                ],
+                [
+                    "\u6cb3\u5357",
+                    11082
+                ],
+                [
+                    "\u6e56\u5317",
+                    8627
+                ],
+                [
+                    "\u6e56\u5357",
+                    8027
+                ],
+                [
+                    "\u5e7f\u4e1c",
+                    19017
+                ],
+                [
+                    "\u5e7f\u897f",
+                    7126
+                ],
+                [
+                    "\u6d77\u5357",
+                    1743
+                ],
+                [
+                    "\u91cd\u5e86",
+                    3691
+                ],
+                [
+                    "\u56db\u5ddd",
+                    9911
+                ],
+                [
+                    "\u8d35\u5dde",
+                    4886
+                ],
+                [
+                    "\u4e91\u5357",
+                    6783
+                ],
+                [
+                    "\u897f\u85cf",
+                    614
+                ],
+                [
+                    "\u9655\u897f",
+                    5667
+                ],
+                [
+                    "\u7518\u8083",
+                    3557
+                ],
+                [
+                    "\u9752\u6d77",
+                    781
+                ],
+                [
+                    "\u5b81\u590f",
+                    962
+                ],
+                [
+                    "\u65b0\u7586",
+                    3066
+                ]
+            ],
+            "hoverAnimation": true,
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "lineStyle": {
+                "width": 1,
+                "opacity": 1,
+                "curveness": 0,
+                "type": "solid"
+            },
+            "areaStyle": {
+                "opacity": 0
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74"
+            ],
+            "selected": {
+                "2016\u5e74": true,
+                "2017\u5e74": true,
+                "2018\u5e74": true
+            },
+            "show": true
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "name": "\u7701\u4efd",
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "nameRotate": 60,
+            "gridIndex": 0,
+            "axisLabel": {
+                "rotate": 45
+            },
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "\u5317\u4eac",
+                "\u5929\u6d25",
+                "\u6cb3\u5317",
+                "\u5c71\u897f",
+                "\u5185\u8499\u53e4",
+                "\u8fbd\u5b81",
+                "\u5409\u6797",
+                "\u9ed1\u9f99\u6c5f",
+                "\u4e0a\u6d77",
+                "\u6c5f\u82cf",
+                "\u6d59\u6c5f",
+                "\u5b89\u5fbd",
+                "\u798f\u5efa",
+                "\u6c5f\u897f",
+                "\u5c71\u4e1c",
+                "\u6cb3\u5357",
+                "\u6e56\u5317",
+                "\u6e56\u5357",
+                "\u5e7f\u4e1c",
+                "\u5e7f\u897f",
+                "\u6d77\u5357",
+                "\u91cd\u5e86",
+                "\u56db\u5ddd",
+                "\u8d35\u5dde",
+                "\u4e91\u5357",
+                "\u897f\u85cf",
+                "\u9655\u897f",
+                "\u7518\u8083",
+                "\u9752\u6d77",
+                "\u5b81\u590f",
+                "\u65b0\u7586"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "2016-2018\u5e74\u5404\u770115\u5c81\u53ca\u4ee5\u4e0a\u603b\u5355\u8eab\u6570\uff08\u5355\u4f4d\uff1a\u4eba\uff09",
+            "top": "5%"
+        }
+    ]
+};
+        chart_693b80eed0cd448a816349414692fdf0.setOption(option_693b80eed0cd448a816349414692fdf0);
+    </script>
+                <div id="3b808d8f568f462bbf92f2437e57696f" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_3b808d8f568f462bbf92f2437e57696f = echarts.init(
+            document.getElementById('3b808d8f568f462bbf92f2437e57696f'), 'white', {renderer: 'canvas'});
+        var option_3b808d8f568f462bbf92f2437e57696f = {
+    "baseOption": {
+        "series": [
+            {
+                "type": "bar",
+                "name": "\u5973\u6027",
+                "data": [
+                    1611,
+                    891,
+                    3349,
+                    1882,
+                    1099,
+                    2259,
+                    1099,
+                    1695,
+                    1318,
+                    3810,
+                    2465,
+                    2678,
+                    1573,
+                    2415,
+                    3686,
+                    4614,
+                    3283,
+                    3110,
+                    7160,
+                    2627,
+                    812,
+                    1509,
+                    4187,
+                    1877,
+                    2381,
+                    275,
+                    2398,
+                    1370,
+                    302,
+                    487,
+                    1244
+                ],
+                "barCategoryGap": "20%",
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            },
+            {
+                "type": "bar",
+                "name": "\u7537\u6027",
+                "data": [
+                    1679,
+                    1260,
+                    4095,
+                    2915,
+                    1746,
+                    2867,
+                    1572,
+                    2403,
+                    1703,
+                    4836,
+                    3880,
+                    4922,
+                    2885,
+                    3463,
+                    5277,
+                    6468,
+                    5343,
+                    4918,
+                    11858,
+                    4500,
+                    931,
+                    2181,
+                    5724,
+                    3008,
+                    4402,
+                    339,
+                    3269,
+                    2187,
+                    479,
+                    475,
+                    1822
+                ],
+                "barCategoryGap": "20%",
+                "label": {
+                    "show": true,
+                    "position": "top",
+                    "margin": 8
+                }
+            }
+        ],
+        "timeline": {
+            "axisType": "category",
+            "orient": "horizontal",
+            "autoPlay": false,
+            "loop": true,
+            "rewind": false,
+            "show": true,
+            "inverse": false,
+            "bottom": "-5px",
+            "data": [
+                "2016\u5e74",
+                "2017\u5e74",
+                "2018\u5e74"
+            ]
+        },
+        "xAxis": [
+            {
+                "name": "\u7701\u4efd",
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "nameRotate": 60,
+                "gridIndex": 0,
+                "axisLabel": {
+                    "rotate": 45
+                },
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": false,
+                    "lineStyle": {
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                },
+                "data": [
+                    "\u5317\u4eac",
+                    "\u5929\u6d25",
+                    "\u6cb3\u5317",
+                    "\u5c71\u897f",
+                    "\u5185\u8499\u53e4",
+                    "\u8fbd\u5b81",
+                    "\u5409\u6797",
+                    "\u9ed1\u9f99\u6c5f",
+                    "\u4e0a\u6d77",
+                    "\u6c5f\u82cf",
+                    "\u6d59\u6c5f",
+                    "\u5b89\u5fbd",
+                    "\u798f\u5efa",
+                    "\u6c5f\u897f",
+                    "\u5c71\u4e1c",
+                    "\u6cb3\u5357",
+                    "\u6e56\u5317",
+                    "\u6e56\u5357",
+                    "\u5e7f\u4e1c",
+                    "\u5e7f\u897f",
+                    "\u6d77\u5357",
+                    "\u91cd\u5e86",
+                    "\u56db\u5ddd",
+                    "\u8d35\u5dde",
+                    "\u4e91\u5357",
+                    "\u897f\u85cf",
+                    "\u9655\u897f",
+                    "\u7518\u8083",
+                    "\u9752\u6d77",
+                    "\u5b81\u590f",
+                    "\u65b0\u7586"
+                ]
+            }
+        ],
+        "yAxis": [
+            {
+                "show": true,
+                "scale": false,
+                "nameLocation": "end",
+                "nameGap": 15,
+                "gridIndex": 0,
+                "inverse": false,
+                "offset": 0,
+                "splitNumber": 5,
+                "minInterval": 0,
+                "splitLine": {
+                    "show": false,
+                    "lineStyle": {
+                        "width": 1,
+                        "opacity": 1,
+                        "curveness": 0,
+                        "type": "solid"
+                    }
+                }
+            }
+        ]
+    },
+    "options": [
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u5973\u6027",
+                        "\u7537\u6027"
+                    ],
+                    "selected": {
+                        "\u5973\u6027": true,
+                        "\u7537\u6027": true
+                    },
+                    "show": true
+                }
+            ],
+            "series": [
+                {
+                    "data": [
+                        1396,
+                        943,
+                        2938,
+                        2233,
+                        1615,
+                        2223,
+                        1228,
+                        2104,
+                        1343,
+                        3993,
+                        2620,
+                        2966,
+                        1670,
+                        2203,
+                        4426,
+                        5228,
+                        2999,
+                        3150,
+                        8553,
+                        2798,
+                        602,
+                        1494,
+                        4451,
+                        2036,
+                        2992,
+                        304,
+                        2572,
+                        1599,
+                        334,
+                        355,
+                        1216
+                    ]
+                },
+                {
+                    "data": [
+                        2038,
+                        1281,
+                        4459,
+                        3095,
+                        1799,
+                        3132,
+                        1712,
+                        2688,
+                        1761,
+                        5070,
+                        4361,
+                        4603,
+                        2537,
+                        3626,
+                        6207,
+                        6931,
+                        4886,
+                        5002,
+                        12922,
+                        4632,
+                        1042,
+                        2205,
+                        6132,
+                        3084,
+                        4071,
+                        344,
+                        3278,
+                        2202,
+                        523,
+                        534,
+                        1828
+                    ]
+                }
+            ],
+            "xAxis": [
+                {
+                    "name": "\u7701\u4efd",
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "nameRotate": 60,
+                    "gridIndex": 0,
+                    "axisLabel": {
+                        "rotate": 45
+                    },
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "\u5317\u4eac",
+                        "\u5929\u6d25",
+                        "\u6cb3\u5317",
+                        "\u5c71\u897f",
+                        "\u5185\u8499\u53e4",
+                        "\u8fbd\u5b81",
+                        "\u5409\u6797",
+                        "\u9ed1\u9f99\u6c5f",
+                        "\u4e0a\u6d77",
+                        "\u6c5f\u82cf",
+                        "\u6d59\u6c5f",
+                        "\u5b89\u5fbd",
+                        "\u798f\u5efa",
+                        "\u6c5f\u897f",
+                        "\u5c71\u4e1c",
+                        "\u6cb3\u5357",
+                        "\u6e56\u5317",
+                        "\u6e56\u5357",
+                        "\u5e7f\u4e1c",
+                        "\u5e7f\u897f",
+                        "\u6d77\u5357",
+                        "\u91cd\u5e86",
+                        "\u56db\u5ddd",
+                        "\u8d35\u5dde",
+                        "\u4e91\u5357",
+                        "\u897f\u85cf",
+                        "\u9655\u897f",
+                        "\u7518\u8083",
+                        "\u9752\u6d77",
+                        "\u5b81\u590f",
+                        "\u65b0\u7586"
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "2016\u5e74\u5404\u770115\u5c81\u53ca\u4ee5\u4e0a\u7537\u5973\u5355\u8eab\u4eba\u53e3\u6570\u5bf9\u6bd4\uff08\u5355\u4f4d\uff1a\u4eba\uff09",
+                    "top": "5%"
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u5973\u6027",
+                        "\u7537\u6027"
+                    ],
+                    "selected": {
+                        "\u5973\u6027": true,
+                        "\u7537\u6027": true
+                    },
+                    "show": true
+                }
+            ],
+            "series": [
+                {
+                    "data": [
+                        1620,
+                        1020,
+                        3284,
+                        2051,
+                        1350,
+                        2441,
+                        1097,
+                        1782,
+                        1335,
+                        3714,
+                        2394,
+                        2582,
+                        1906,
+                        2264,
+                        4154,
+                        4931,
+                        3115,
+                        3156,
+                        7816,
+                        2715,
+                        660,
+                        1432,
+                        4296,
+                        2091,
+                        2832,
+                        275,
+                        2683,
+                        1427,
+                        318,
+                        556,
+                        1178
+                    ]
+                },
+                {
+                    "data": [
+                        1979,
+                        1542,
+                        4236,
+                        3264,
+                        1601,
+                        2945,
+                        1567,
+                        2476,
+                        1767,
+                        4844,
+                        4487,
+                        4244,
+                        2688,
+                        3370,
+                        5625,
+                        6910,
+                        5196,
+                        4840,
+                        11386,
+                        4569,
+                        961,
+                        1990,
+                        6514,
+                        3163,
+                        4668,
+                        317,
+                        2777,
+                        2099,
+                        484,
+                        481,
+                        1697
+                    ]
+                }
+            ],
+            "xAxis": [
+                {
+                    "name": "\u7701\u4efd",
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "nameRotate": 60,
+                    "gridIndex": 0,
+                    "axisLabel": {
+                        "rotate": 45
+                    },
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "\u5317\u4eac",
+                        "\u5929\u6d25",
+                        "\u6cb3\u5317",
+                        "\u5c71\u897f",
+                        "\u5185\u8499\u53e4",
+                        "\u8fbd\u5b81",
+                        "\u5409\u6797",
+                        "\u9ed1\u9f99\u6c5f",
+                        "\u4e0a\u6d77",
+                        "\u6c5f\u82cf",
+                        "\u6d59\u6c5f",
+                        "\u5b89\u5fbd",
+                        "\u798f\u5efa",
+                        "\u6c5f\u897f",
+                        "\u5c71\u4e1c",
+                        "\u6cb3\u5357",
+                        "\u6e56\u5317",
+                        "\u6e56\u5357",
+                        "\u5e7f\u4e1c",
+                        "\u5e7f\u897f",
+                        "\u6d77\u5357",
+                        "\u91cd\u5e86",
+                        "\u56db\u5ddd",
+                        "\u8d35\u5dde",
+                        "\u4e91\u5357",
+                        "\u897f\u85cf",
+                        "\u9655\u897f",
+                        "\u7518\u8083",
+                        "\u9752\u6d77",
+                        "\u5b81\u590f",
+                        "\u65b0\u7586"
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "2017\u5e74\u5404\u770115\u5c81\u53ca\u4ee5\u4e0a\u7537\u5973\u5355\u8eab\u4eba\u53e3\u6570\u5bf9\u6bd4\uff08\u5355\u4f4d\uff1a\u4eba\uff09",
+                    "top": "5%"
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        },
+        {
+            "legend": [
+                {
+                    "data": [
+                        "\u5973\u6027",
+                        "\u7537\u6027"
+                    ],
+                    "selected": {
+                        "\u5973\u6027": true,
+                        "\u7537\u6027": true
+                    },
+                    "show": true
+                }
+            ],
+            "series": [
+                {
+                    "data": [
+                        1611,
+                        891,
+                        3349,
+                        1882,
+                        1099,
+                        2259,
+                        1099,
+                        1695,
+                        1318,
+                        3810,
+                        2465,
+                        2678,
+                        1573,
+                        2415,
+                        3686,
+                        4614,
+                        3283,
+                        3110,
+                        7160,
+                        2627,
+                        812,
+                        1509,
+                        4187,
+                        1877,
+                        2381,
+                        275,
+                        2398,
+                        1370,
+                        302,
+                        487,
+                        1244
+                    ]
+                },
+                {
+                    "data": [
+                        1679,
+                        1260,
+                        4095,
+                        2915,
+                        1746,
+                        2867,
+                        1572,
+                        2403,
+                        1703,
+                        4836,
+                        3880,
+                        4922,
+                        2885,
+                        3463,
+                        5277,
+                        6468,
+                        5343,
+                        4918,
+                        11858,
+                        4500,
+                        931,
+                        2181,
+                        5724,
+                        3008,
+                        4402,
+                        339,
+                        3269,
+                        2187,
+                        479,
+                        475,
+                        1822
+                    ]
+                }
+            ],
+            "xAxis": [
+                {
+                    "name": "\u7701\u4efd",
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "nameRotate": 60,
+                    "gridIndex": 0,
+                    "axisLabel": {
+                        "rotate": 45
+                    },
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "\u5317\u4eac",
+                        "\u5929\u6d25",
+                        "\u6cb3\u5317",
+                        "\u5c71\u897f",
+                        "\u5185\u8499\u53e4",
+                        "\u8fbd\u5b81",
+                        "\u5409\u6797",
+                        "\u9ed1\u9f99\u6c5f",
+                        "\u4e0a\u6d77",
+                        "\u6c5f\u82cf",
+                        "\u6d59\u6c5f",
+                        "\u5b89\u5fbd",
+                        "\u798f\u5efa",
+                        "\u6c5f\u897f",
+                        "\u5c71\u4e1c",
+                        "\u6cb3\u5357",
+                        "\u6e56\u5317",
+                        "\u6e56\u5357",
+                        "\u5e7f\u4e1c",
+                        "\u5e7f\u897f",
+                        "\u6d77\u5357",
+                        "\u91cd\u5e86",
+                        "\u56db\u5ddd",
+                        "\u8d35\u5dde",
+                        "\u4e91\u5357",
+                        "\u897f\u85cf",
+                        "\u9655\u897f",
+                        "\u7518\u8083",
+                        "\u9752\u6d77",
+                        "\u5b81\u590f",
+                        "\u65b0\u7586"
+                    ]
+                }
+            ],
+            "title": [
+                {
+                    "text": "2018\u5e74\u5404\u770115\u5c81\u53ca\u4ee5\u4e0a\u7537\u5973\u5355\u8eab\u4eba\u53e3\u6570\u5bf9\u6bd4\uff08\u5355\u4f4d\uff1a\u4eba\uff09",
+                    "top": "5%"
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0
+            },
+            "color": [
+                "#c23531",
+                "#2f4554",
+                "#61a0a8",
+                "#d48265",
+                "#749f83",
+                "#ca8622",
+                "#bda29a",
+                "#6e7074",
+                "#546570",
+                "#c4ccd3",
+                "#f05b72",
+                "#ef5b9c",
+                "#f47920",
+                "#905a3d",
+                "#fab27b",
+                "#2a5caa",
+                "#444693",
+                "#726930",
+                "#b2d235",
+                "#6d8346",
+                "#ac6767",
+                "#1d953f",
+                "#6950a1",
+                "#918597"
+            ]
+        }
+    ]
+};
+        chart_3b808d8f568f462bbf92f2437e57696f.setOption(option_3b808d8f568f462bbf92f2437e57696f);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+<h2 align="center">{{ the_title }}</h2>
+    <h3 align="center">请选择您想了解的年份</h3>
+    <div align="center">
+    <select  name="" onchange="javascript:window.open(this.options[this.selectedindex].value)" style="width:250px;height:30px;text-align:center;text-align-last:center">
+<option value='/unmarried_people/2016' selected>2016</OPTION>
+<option value='/unmarried_people/2017' selected>2017</option>
+<option value='/unmarried_people/2018' selected>2018</option>
+<option value="#" selected>--请选择--</option>
+    </select>
+    </div>
+    <SCRIPT language=JavaScript>
+var select = document.querySelector('select');select.onchange = function(){	window.location=this.value;}
+    </SCRIPT>
+<table align="center">
+    <tr>
+    {% for row_title in the_row_title  %}
+        <th>{{ row_title }}</th>
+    {% endfor %}
+     </tr>
+    {% for log_row in the_data %}
+        <tr>
+        {% for item in log_row %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+
+    {% endfor %}
+
+</table>
+<div align="right">
+    <a href="/"><input class="anniu" name="" type="button" value="返回首页" /></a>
+</div>
+</body>
+</form>
+{% endblock %}
+
